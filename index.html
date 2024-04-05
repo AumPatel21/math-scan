@@ -1,0 +1,66 @@
+<!-- MathScanApp/templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <title>MathScan&#128175;</title>
+</head>
+<body class="bg-[#161a1d] flex items-center justify-center min-h-screen px-16">
+    <!-- container -->
+    <div class="flex flex-col justify-center p-16 rounded-xl shadow-[0_5px_55px_0_rgba(65,90,119,0.3)]">
+        <!-- heading -->
+        <div class="flex justify-center">
+            <h1 class="text-center text-5xl text-red-600 font-['Open_Sans']">MathScan&#128175;</h1>
+        </div>
+
+        <!-- intro stuff -->
+        <div class="flex flex-col items-center pt-8 pb-6 text-gray-200">
+            <p class="text-center">This is the home page of MathScan.</p>
+            <p class="text-center">Some stuff about MathScan</p>
+        </div>
+
+        <!-- uploaded image section -->
+        <div>
+            <div class="flex justify-center"> 
+                <img id="display-img" src="https://picsum.photos/500/300" alt="uploaded image" class=" h-[300px] w-[500px] rounded-xl object-scale-down"> <!-- object-contain shadow-lg shadow-[#fdfffc]/20 -->
+            </div>
+        </div>
+        
+        <!-- upload form -->
+        <div class="flex justify-center mt-10 gap-2">
+
+            <!-- delete button -->
+            <button id="delete" class="group relative inline-flex h-12 w-12 items-center justify-center overflow-hidden rounded-lg text-white bg-gradient-to-r from-red-400 via-red-700 to-red-800 hover:bg-gradient-to-br shadow-lg shadow-red-500/50">
+                <i class="fa-solid fa-trash-can text-white"></i>
+            </button>
+
+            <!-- upload button -->
+            <form method="POST" enctype="multipart/form-data">
+                <input type="file" name="file" id="file" style="display: none;" accept="image/png, image/jpg, image/jpeg">
+                <button type="button" id="upload" class="group relative inline-flex h-12 w-48 items-center justify-center overflow-hidden overflow-x-hidden rounded-md bg-gray-300 px-8 py-2 text-[#0a0908] font-bold hover:text-white transition-all ease-in shadow-lg shadow-[#d3d3d3]/40 dark:shadow-lg dark:shadow-[#f5f3f4]/30">
+                    <span class="absolute inset-0 overflow-hidden rounded-md">
+                        <span class="absolute left-0 aspect-square w-full origin-center -translate-x-full rounded-full bg-black transition-all duration-500 group-hover:-translate-x-0 group-hover:scale-150">
+                        </span>
+                    </span>
+                    <div class="mr-0 w-0 -translate-x-[100%] opacity-0 transition-all duration-200 group-hover:mr-1 group-hover:w-5 group-hover:translate-x-0 group-hover:opacity-100">
+                        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                    </div>
+                    <span class="relative z-10">UPLOAD</span>
+                </button>
+            </form>
+        </div>
+
+        <!-- results here -->
+        <div class="flex justify-center my-5">
+            <input type="text" readonly id="result" class="bg-gray-50 w-64 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block px-4 py-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-center" placeholder="Results will appear here!" required />
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+        
+    <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
+</body>
+</html>
