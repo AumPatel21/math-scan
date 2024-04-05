@@ -49,6 +49,7 @@ document.getElementById('upload').addEventListener('click', async function() {
     reader.onload = async function(e) {
       const imageData = e.target.result; // Image data as base64 string
       await uploadImage(imageData);
+      console.log('Image uploaded successfully');
     };
     reader.readAsDataURL(file);
 });
