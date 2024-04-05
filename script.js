@@ -29,7 +29,7 @@ document.getElementById('delete').addEventListener('click', function() {
 
 // Function to upload image to backend
 async function uploadImage(imageData) {
-    const response = await fetch('https://0odd6pprtd.execute-api.us-east-1.amazonaws.com/tests', {
+    const response = await fetch('https://0odd6pprtd.execute-api.us-east-1.amazonaws.com/tests/MathScanManager', {
       method: 'POST',
       body: imageData,
     });
