@@ -1,4 +1,4 @@
-
+import axios from 'axios';
 
 // Update API Endpoint URL
 const uploadEndpoint = 'https://8i2tpthfkg.execute-api.us-east-1.amazonaws.com/prod/upload';
