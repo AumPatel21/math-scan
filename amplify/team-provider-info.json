@@ -1,0 +1,23 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-mathscan-dev-47a02-authRole",
+      "UnauthRoleArn": "arn:aws:iam::620339869704:role/amplify-mathscan-dev-47a02-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::620339869704:role/amplify-mathscan-dev-47a02-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-mathscan-dev-47a02-deployment",
+      "UnauthRoleName": "amplify-mathscan-dev-47a02-unauthRole",
+      "StackName": "amplify-mathscan-dev-47a02",
+      "StackId": "arn:aws:cloudformation:us-east-1:620339869704:stack/amplify-mathscan-dev-47a02/e345ab00-fdf6-11ee-84ad-0afff5c6ac3d",
+      "AmplifyAppId": "d8n8smyyvnjrg"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d8n8smyyvnjrg",
+          "type": "cicd"
+        }
+      }
+    }
+  }
+}
