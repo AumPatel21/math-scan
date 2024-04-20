@@ -1,0 +1,5 @@
+# netlify.toml
+
+[build]
+  command = "npm run build"  # Specify the build command if needed
+  publish = "src"            # Specify the directory to publish
