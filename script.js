@@ -37,19 +37,71 @@ async function getSolutions() {
 }
 
 // Upload image button click handler
-document.getElementById('upload').addEventListener('click', async function() {
+// document.getElementById('upload').addEventListener('click', async function() {
+//   const file = document.getElementById('file').files[0];
+//   if (!file) {
+//     return; // Handle no file selected case
+//   }
+//   const reader = new FileReader();
+//   reader.onload = async function(e) {
+//     const imageData = e.target.result; // Image data as base64 string
+//     await uploadImage(imageData);
+//     console.log('Image uploaded successfully');
+//   };
+//   reader.readAsDataURL(file);
+// });
+
+// Upload image button click handler
+document.getElementById('upload-form').addEventListener('submit', async function(event) {
+  event.preventDefault(); // Prevent form submission
   const file = document.getElementById('file').files[0];
   if (!file) {
-    return; // Handle no file selected case
+      return; // Handle no file selected case
   }
   const reader = new FileReader();
   reader.onload = async function(e) {
-    const imageData = e.target.result; // Image data as base64 string
-    await uploadImage(imageData);
-    console.log('Image uploaded successfully');
+      const imageData = e.target.result; // Image data as base64 string
+      await uploadImage(imageData); // Upload the image to backend
+      console.log('Image uploaded successfully');
   };
   reader.readAsDataURL(file);
 });
+
+document.getElementById('file').addEventListener('change', function(event) {
+  const file = event.target.files[0];
+  if (file) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+          const imageData = e.target.result; // Image data as base64 string
+          displayUploadedImage(imageData); // Display the uploaded image
+      };
+      reader.readAsDataURL(file);
+  }
+});
+
+
+// Update the src attribute of the display image
+function displayUploadedImage(imageData) {
+  document.getElementById('display-img').src = imageData;
+}
+
+// delete image
+document.getElementById('delete').addEventListener('click', function() {
+  document.getElementById('display-img').src = 'https://picsum.photos/500/300';
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Get solutions button click handler
 // document.getElementById('result').addEventListener('click', async function() {

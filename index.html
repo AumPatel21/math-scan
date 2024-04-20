@@ -37,9 +37,9 @@
             </button>
 
             <!-- upload button -->
-            <form method="POST" enctype="multipart/form-data">
+            <form id="upload-form" method="POST" enctype="multipart/form-data">
                 <input type="file" name="file" id="file" style="display: none;" accept="image/png, image/jpg, image/jpeg">
-                <button type="button" id="upload" class="group relative inline-flex h-12 w-48 items-center justify-center overflow-hidden overflow-x-hidden rounded-md bg-gray-300 px-8 py-2 text-[#0a0908] font-bold hover:text-white transition-all ease-in shadow-lg shadow-[#d3d3d3]/40 dark:shadow-lg dark:shadow-[#f5f3f4]/30">
+                <button type="submit" class="group relative inline-flex h-12 w-48 items-center justify-center overflow-hidden overflow-x-hidden rounded-md bg-gray-300 px-8 py-2 text-[#0a0908] font-bold hover:text-white transition-all ease-in shadow-lg shadow-[#d3d3d3]/40 dark:shadow-lg dark:shadow-[#f5f3f4]/30" onclick="document.getElementById('file').click()">
                     <span class="absolute inset-0 overflow-hidden rounded-md">
                         <span class="absolute left-0 aspect-square w-full origin-center -translate-x-full rounded-full bg-black transition-all duration-500 group-hover:-translate-x-0 group-hover:scale-150">
                         </span>
